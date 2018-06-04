@@ -1,6 +1,63 @@
-.loginContainer {
-	width: 200px;
-	height: 300px;
-	border: 1px solid yellow; 
+// .loginContainer {
+// 	width: 200px;
+// 	height: 300px;
+// 	border: 1px solid yellow; 
 	
+// }
+
+.login {
+	.bg {
+		width: 100%;
+		height: 100%;
+		background-image: url('./images/bg.jpg');
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    bottom: 0;
+	    z-index: -1;
+	}
+
+	.loginContainer {
+		position: absolute;
+	    right: 0;
+	    left: 0;
+	    top: 0;
+	    bottom: 0;
+	    margin: auto;
+	    width: 100%;
+	    padding: .3rem;
+    	height: 4.9rem;
+
+	    .inputContainer {
+	    	margin-bottom: .5rem;
+    		padding: .1rem;
+	    	background: #fff;
+
+			img {
+				margin-top: .1rem;
+			}
+
+			input {
+				width: 6.2rem;
+			    height: .81rem;
+			    line-height: .81rem;
+			    border: none;
+			    outline: none;
+			    vertical-align: top;
+			    padding-left: .2rem;
+			    font-size: .3rem;
+			}
+	    }
+
+	    button {
+			width: 6.9rem;
+		    height: 1rem;
+		    background: #0ea8d8;
+		    border: none;
+		    border-radius: .1rem;
+		    margin-top: .25rem;
+		    font-size: .37rem;
+		}
+	}
 }

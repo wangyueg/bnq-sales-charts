@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from './index.action';
 import Loader from '../../components/loader/';
+import LockImage from './images/icon_lock.png';
+import PhoneImage from './images/icon_phone.png';
 import './index.less';
 
 class Login extends Component {
@@ -12,35 +14,28 @@ class Login extends Component {
 		this.state = {
 			username: this.props.login.username,
 			password: '',
-			spinning: true
+			spinning: false
 		}
 	}
 
 	render() {
-		setTimeout(() => {
-			this.setState({
-				spinning: false
-			})
-		}, 400)
 		return (
-			<div>
+			<div className="login">
+				<div className="bg"></div>
 				<div className="loginContainer">
 					<div className="inputContainer">
-						<label htmlFor="username">用户名</label>
-						<input type="text" id="username" />
+						<img htmlFor="username" src={PhoneImage} alt="用户名" />
+						<input type="text" id="username" placeholder="请输入手机号码" />
 					</div>
 					<div className="inputContainer">
-						<label htmlFor="password">密码</label>
-						<input type="text" id="password" />
+						<img htmlFor="password" src={LockImage} alt="密码" />
+						<input type="text" id="password" placeholder="请输入密码" />
 					</div>
+					<button>登录</button>
 				</div>
 				<Loader spinning={this.state.spinning} />
 			</div>
 		);
-	}
-
-	componentDidMount() {
-		this.props.loginByAccount();
 	}
 }
 
