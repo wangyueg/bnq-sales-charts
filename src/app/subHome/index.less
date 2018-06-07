@@ -50,13 +50,39 @@
 			}
 		}
 
-		.timeSalesChart, .regionSalesChart {
+		.timeSalesChart, .regionSalesChart, .salesRatioChart, .storeSales {
 			background: #312727;
 			width: 100%;
 		}
 
-		.regionSalesChart {
+		.timeSalesChart, .regionSalesChart, .salesRatioChart, .storeSales {
 			margin-top: .2rem;
+		}
+
+		.storeSales {
+			display: -webkit-flex;
+			display: flex;
+			justify-content: center;
+
+			table {
+				min-height: 2rem;
+				width: 90%;
+				margin: .2rem;
+
+				tr {
+					display: -webkit-flex;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+    				color: #fff;
+    				height: .6rem;
+
+    				td {
+    					width: 34%;
+    					text-align: center;
+    				}
+				}
+			}
 		}
 	}
 }

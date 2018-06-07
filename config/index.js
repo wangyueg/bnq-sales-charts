@@ -1,9 +1,9 @@
 const url = {
 	development: {
-		apiUrl: 'http://106.14.251.99',
+		apiUrl: 'http://192.168.251.104:8080',
 		port: 8080,
 		autoOpenBrowser: true,
-		proxyFilter: '/wms'
+		proxyFilter: '/report'
 	},
 	production: {
 		apiUrl: ''
